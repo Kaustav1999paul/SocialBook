@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AccountFragment"
+    android:background="#290073">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/profile_style">
+
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:id="@+id/logout"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_power_settings_new_black_24dp"
+                app:fabCustomSize="30dp"
+                android:backgroundTint="#F44336"/>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatar"
+                android:layout_width="100dp"
+                android:background="@drawable/person"
+                android:layout_marginTop="20dp"
+                app:civ_border_width="4dp"
+                app:civ_border_color="#FFFFFF"
+                android:layout_height="100dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/avatar_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/comfortaa"
+                android:gravity="center"
+                android:text="Person Name"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/comfortaa"
+                android:gravity="center"
+                android:text="Person Email"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/friends"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Friends"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/noti"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/comfortaa"
+                        android:textAllCaps="false"
+                        android:textColor="#FFFFFF"
+                        android:text="Notifications"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/newPost"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="New Post"
+                android:paddingLeft="5dp"
+                android:textAllCaps="false"
+                android:elevation="10dp"
+                android:layout_marginBottom="10dp"
+                android:shadowColor="#FFFFFF"
+                android:drawableLeft="@drawable/ic_add_circle_black_24dp"
+                android:background="@drawable/custom_button"/>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/dialog_background"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:outlineSpotShadowColor="#FFFFFF"
+                android:outlineAmbientShadowColor="#FFFFFF"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/comfortaa"
+                    android:paddingLeft="30dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Your Posts"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/personalPostList"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

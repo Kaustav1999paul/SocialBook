@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".CommentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp">
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentList"
+            android:layout_width="match_parent"
+            android:paddingBottom="50dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/comfortaa"
+        android:text="No comments yet!"
+        android:textColor="#2C2C2C"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/textComment"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/comfortaa"
+            android:paddingLeft="10dp"
+            android:hint=" Type your comment"
+            android:background="@drawable/custom_button"
+            android:layout_gravity="center"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/postComment"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center"
+            app:fabCustomSize="50dp"
+            app:elevation="0dp"
+            android:src="@drawable/send"
+            app:backgroundTint="#000000"/>
+    </LinearLayout>
+</RelativeLayout>

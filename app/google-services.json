@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "410240104237",
+    "firebase_url": "https://social-book-6eb9c.firebaseio.com",
+    "project_id": "social-book-6eb9c",
+    "storage_bucket": "social-book-6eb9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410240104237:android:e97aed4361c59786a085a4",
+        "android_client_info": {
+          "package_name": "com.example.socialbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410240104237-r93vqvvsgcce84k907fl4hrmqltqtlf4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.socialbook",
+            "certificate_hash": "d681587b6b26e435a25e4a00548e23cbaae3bbdb"
+          }
+        },
+        {
+          "client_id": "410240104237-lgile0hdth9vmf6m59k7ct443mr2btks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFq9ONCyGf4FbLtDdbUnJhwfI1ddwNU3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410240104237-lgile0hdth9vmf6m59k7ct443mr2btks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

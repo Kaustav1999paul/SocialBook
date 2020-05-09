@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AccountFragment"
+    android:background="#290073">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/profile_style">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="100dp"
+                    android:background="@drawable/person"
+                    android:layout_marginTop="80dp"
+                    app:civ_border_width="4dp"
+                    app:civ_border_color="#FFFFFF"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/avatar_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/comfortaa"
+                    android:gravity="center"
+                    android:text="Person Name"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/comfortaa"
+                    android:gravity="center"
+                    android:text="Person Email"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/dialog_background"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:elevation="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:outlineSpotShadowColor="#FFFFFF"
+                android:outlineAmbientShadowColor="#FFFFFF"
+                android:layout_marginTop="80dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/comfortaa"
+                    android:paddingLeft="30dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:text="Posts"
+                    android:layout_marginTop="20dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/PostList"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+</RelativeLayout>
